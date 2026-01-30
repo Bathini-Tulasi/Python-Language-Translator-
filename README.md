@@ -6,22 +6,35 @@ The Language Translator App takes user input text, a source language, and a dest
 
 # 🛠️ Technologies Used
 Python
+
 Flask – Web framework
+
 googletrans – Language translation library
+
 HTML & CSS – Frontend design
+
 Jinja2 – Template rendering
 
 # Key Features
 >Translate text between multiple languages
+
 >Uses Google Translate backend via googletrans
+
 >Simple and clean UI
+
 >Supports GET and POST requests
+
 >Well-structured project layout (templates, static)
+
 >Real-time translation without page reload issues
 
 # How It Works
 User enters text to be translated.
+
 User selects source and target languages.
+
 Flask handles the POST request.
+
 googletrans translates the text.
+
 The translated output is displayed on the same page.
