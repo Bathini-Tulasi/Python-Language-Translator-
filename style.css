@@ -1,0 +1,103 @@
+body {
+    background-image: url('transulator.webp');
+    background-size: cover;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Open Sans', Arial, sans-serif;
+
+}
+
+.container {
+    --box-width: 900px;      
+    --box-height: 500px;    
+    background: rgba(255,255,255,0.95);
+    border-radius: 18px;
+    padding: 32px 30px 24px 30px;
+    width: var(--box-width);
+    min-width: 320px;
+    max-width: 98vw;
+    min-height: var(--box-height);
+    box-shadow: 0 8px 38px 4px rgba(80,80,120,0.16), 0 2px 4px 0 rgba(80,80,120,0.13);
+    margin: 36px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+h1, h2, h3 {
+    color: black;
+    margin-top: 0;
+}
+.row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: 500;
+    color: #22284c;
+}
+
+select {
+    padding: 5px 16px 5px 10px;
+    border: 1px solid #D5D9EC;
+    border-radius: 6px;
+    background: #f7f7fa;
+    font-size: 1em;
+    margin-left: 2px;
+}
+
+textarea {
+    width: 100%;
+    height: 160px;
+    padding: 14px;
+    font-size: 1.1em;
+    border: 1.5px solid #BDBDBD;
+    border-radius: 10px;
+    margin: 14px 0 10px 0;
+    background: #fafbfc;
+    resize: both; /* user can resize */
+    box-sizing: border-box;
+}
+
+/* Button styling */
+button, input[type="submit"] {
+    padding: 10px 28px;
+    background: #4364F7;
+    color: #fff;
+    font-size: 1em;
+    border: none;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(67,100,247,0.10);
+    cursor: pointer;
+    margin-bottom: 6px;
+    transition: background 0.22s;
+}
+
+button:hover, input[type="submit"]:hover {
+    background: #2241AA;
+}
+
+/* Output box */
+.output-box {
+    margin-top: 18px;
+    padding: 14px 10px;
+    background: #f4f7fd;
+    border: 1px solid #d8e3f7;
+    border-radius: 7px;
+    min-height: 45px;
+    color: #232949;
+    font-size: 1.12em;
+}
+
+@media (max-width: 950px) {
+    .container {
+        width: 98vw;
+        padding: 18px 5vw;
+    }
+    textarea {
+        height: 100px;
+    }
+}

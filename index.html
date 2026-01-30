@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Language Translator</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Language Translator</h1>
+
+        <form method="post">
+            <div class="row">
+                <label>From:</label>
+                <select name="src_lang">
+                    {% for code, name in languages.items() %}
+                        <option value="{{ code }}" 
+                            {% if src_lang == code %}selected{% endif %}>
+                            {{ name }}
+                        </option>
+                    {% endfor %}
+                </select>
+
+                <label>To:</label>
+                <select name="dest_lang">
+                    {% for code, name in languages.items() %}
+                        <option value="{{ code }}" 
+                            {% if dest_lang == code %}selected{% endif %}>
+                            {{ name }}
+                        </option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <textarea name="input_text" rows="5" cols="40"
+                placeholder="Enter text here...">{{ input_text }}</textarea>
+
+            <button type="submit">Translate</button>
+        </form>
+
+        <div class="output-box">
+            <h3>Output</h3>
+            <p>{{ output }}</p>
+        </div>
+    </div>
+</body>
+</html>
